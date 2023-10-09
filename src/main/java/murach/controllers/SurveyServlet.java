@@ -46,6 +46,11 @@ public class SurveyServlet extends HttpServlet {
         String wantsUpdates = request.getParameter("wantsUpdates");
         String contactVia = request.getParameter("contactVia");
         
+        
+        System.out.println("firstName : " + firstName);
+        
+        
+        
         // process paramters
         if (heardFrom == null) {
             heardFrom = "NA";
@@ -70,6 +75,8 @@ public class SurveyServlet extends HttpServlet {
         // store User object in request
         request.setAttribute("user", user);
         
+        System.out.println("user : " + user);
+
         // forward request to JSP
 
         url = "/survey.jsp";
